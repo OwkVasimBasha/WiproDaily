@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EA7A203-EFDD-4E38-A1EE-32C5513A7A2D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Helloworld</RootNamespace>
+    <AssemblyName>Helloworld</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Helloworld.PalindormeDemo</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Airthemetic.cs" />
+    <Compile Include="ArrayCopy.cs" />
+    <Compile Include="ArrayString.cs" />
+    <Compile Include="Bitwise1.cs" />
+    <Compile Include="Bitwise2.cs" />
+    <Compile Include="Bitwise3.cs" />
+    <Compile Include="Bitwise4.cs" />
+    <Compile Include="BoxEx1.cs" />
+    <Compile Include="BoxingAndUnBoxingDemo.cs" />
+    <Compile Include="Calculation.cs" />
+    <Compile Include="Case1.cs" />
+    <Compile Include="Case2.cs" />
+    <Compile Include="CirclePrograme.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="CtoF.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Demo.cs" />
+    <Compile Include="DemoArry.cs" />
+    <Compile Include="DemoForEach.cs" />
+    <Compile Include="Demowhile.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeBox.cs" />
+    <Compile Include="EmployeeBoxExtend.cs" />
+    <Compile Include="EmployeeData.cs" />
+    <Compile Include="EmployeeDetailsByUsingCommand.cs" />
+    <Compile Include="FactorialDemo.cs" />
+    <Compile Include="FactorsDemo.cs" />
+    <Compile Include="ForDemo.cs" />
+    <Compile Include="GreaterThanNumber.cs" />
+    <Compile Include="InputThroughCommandPrompt.cs" />
+    <Compile Include="Milestone2.cs" />
+    <Compile Include="MilestoneEx1.cs" />
+    <Compile Include="PalindormeDemo.cs" />
+    <Compile Include="PerfectNumberDemo.cs" />
+    <Compile Include="PositiveOrNegative.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quiz1.cs" />
+    <Compile Include="Quiz2.cs" />
+    <Compile Include="Unary.cs" />
+    <Compile Include="UsingCommandPrompt.cs" />
+    <Compile Include="VariableExamples.cs" />
+    <Compile Include="Voting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
