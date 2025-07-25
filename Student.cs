@@ -1,29 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentDemo
+namespace AbstarctEx
 {
-    public class Student
+    internal abstract class Student
     {
-        public int id;
-        public string name;
-        public double salary;
-
-        public Student() { }
-
-        public Student(int id, string name, double salary)
+        public void Course()
         {
-            this.id = id;
-            this.name = name;
-            this.salary = salary;            
+            Console.WriteLine("The course is C# Do.net");
         }
-        public override string ToString()
-        {
-            return "sid"+id+"name"+name+"salary"+salary;
-        }
+        public abstract void Name();
+        public abstract void Email();
     }
 }

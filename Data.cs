@@ -4,24 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helloworld
+namespace StaticMethodEx
 {
     internal class Data
     {
-        public void Greeting()
+        public void show()
         {
-            Console.WriteLine("welcome to Dotnet programm");
+            Console.WriteLine("Show method from Data");
         }
-
-        internal void Company()
+        public static void Dispaly()
         {
-            Console.WriteLine("company name is wipro");
-        }
+            Console.WriteLine("Display Method from Class Data");
 
-        private void Trainer()
+        }
+        static void Main(string[] args)
         {
-            Console.WriteLine("Trainer name is Prasanna Pappu..");
-        }
+            Data data = new Data();
+            data.show();
+            Data.Dispaly();
 
+        }
     }
 }

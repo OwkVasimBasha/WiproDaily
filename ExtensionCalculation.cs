@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExtensionEx1
 {
-    internal class Calculation
+    internal static class ExtensionCalculation
     {
-        public int Sum(int a, int b)
+        public static int mul(this Calculation cal, int a, int b)
         {
-            return a + b;
-        }
-        public int Sub(int a, int b)
-        {
-            return a - b;
+            return a * b;
         }
     }
 }

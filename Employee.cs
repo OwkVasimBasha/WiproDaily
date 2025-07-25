@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helloworld
+namespace AbstractionEx2
 {
-    internal class Employee
+    internal abstract class Employee
     {
-        public int empno;
-        public String empName;
-        public int basis;
+        public void show()
+        {
+            Console.WriteLine("The Employee name is vasim");
+        }
+
+        public abstract void id();
+        public abstract void name();
     }
 }
