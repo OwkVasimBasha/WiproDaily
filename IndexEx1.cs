@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectExample
 {
-    internal class Program
+    internal class IndexEx1
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

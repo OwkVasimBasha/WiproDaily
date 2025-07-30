@@ -4,24 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbsConEx
+namespace ProjectExample
 {
-    internal class Employ
+    public class Employ
     {
-        private int id;
-        private string name;
-        private double basic;
+        public int Empno { get; set; }
+        public string Name { get; set; }
+        public double Basic { get; set; }
+        public int? LeaveDays { get; set; }
 
-        public Employ(int id,string name, double basic)
-        {
-            this.id = id;
-            this.name = name;
-            this.basic = basic;
-        }
-
-        public override string ToString()
-        {
-            return "The id is" + id + "The name is " + name + "The basic is" + basic;
-        }
+        public Nullable<int> Status { get; set; }
     }
 }

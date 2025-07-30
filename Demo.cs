@@ -4,17 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NUnitDemos
+namespace ProjectExample
 {
     public class Demo
     {
-        public int Sum(int a, int b)
+        public string[] names = new string[5];
+        public string this[int i]
         {
-            return a + b;
-        }
-        public string SayHello()
-        {
-            return "Welcome to C# FSD Programming...";
+            get
+            {
+                return names[i];
+            }
+            set
+            {
+                names[i] = value;
+            }
         }
     }
+    public class IndexerEx1
+    {
+        static void Main()
+        {
+            Demo demo = new Demo();
+            demo[0] = "Anusha";
+            demo[1] = "Raj";
+            demo[2] = "Narayana";
+            demo[3] = "Yamini";
+            demo[4] = "Pallavi";
+            Console.WriteLine("Data is ");
+            foreach (var v in demo.names)
+            {
+                Console.WriteLine(v);
+
+            }
+        }
+    }
+
 }

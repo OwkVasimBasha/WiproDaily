@@ -2,27 +2,54 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace StaticMethodEx
+namespace ProjectExample
 {
-    internal class Data
+    class Data
     {
-        public void show()
+        public void Show(string name)
         {
-            Console.WriteLine("Show method from Data");
-        }
-        public static void Dispaly()
-        {
-            Console.WriteLine("Display Method from Class Data");
-
-        }
-        static void Main(string[] args)
-        {
-            Data data = new Data();
-            data.show();
-            Data.Dispaly();
-
+            lock (this)
+            {
+                {
+                    Console.WriteLine("Hellow" + name);
+                    Thread.Sleep(1000);
+                    Console.WriteLine("How are you");
+                }
+            }
         }
     }
+    public class SyncExample1
+    {
+        Data data;
+        SyncExample1(Data data)
+        {
+            this.data = data;
+        }
+
+        public void Rajesh()
+        {
+            data.Show("Rajesh");
+        }
+
+        public void Venkata()
+        {
+            data.Show("Venkata");
+        }
+
+        static void Main()
+        {
+            SyncExample1 syncExample1 = new SyncExample1(new Data());
+            ThreadStart th1 = new ThreadStart(syncExample1.Rajesh);
+            ThreadStart th2 = new ThreadStart(syncExample1.Venkata);
+            Thread t1 = new Thread(th1);
+            Thread t2 = new Thread(th2);
+
+            t1.Start();
+            t2.Start();
+        }
+    }
+
 }

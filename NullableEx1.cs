@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjectExample
 {
-    internal class Program
+    internal class NullableEx1
     {
-        static void Main(string[] args)
-        {
-        }
+       
     }
 }
