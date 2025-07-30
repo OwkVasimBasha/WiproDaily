@@ -4,15 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstarctEx
+namespace ReflectionEx
 {
-    internal abstract class Student
+    internal class Student
     {
-        public void Course()
+        public int StudentId { get; set; }
+        public string StudnetName { get; set; }
+
+        public double Cgpa { get; set; }
+
+        public Student()
         {
-            Console.WriteLine("The course is C# Do.net");
+            StudentId = 0;
+            StudnetName = string.Empty;
+            Cgpa = 0;
         }
-        public abstract void Name();
-        public abstract void Email();
+        public Student(int studentId, string studnetName, double cgpa)
+        {
+            StudentId = studentId;
+            StudnetName = studnetName;
+            Cgpa = cgpa;
+        }
+
+        public void ShowStudent()
+        {
+            Console.WriteLine("Under Construction...");
+        }
+
+
+        public void DeleteStudnet(int sid)
+        {
+            Console.WriteLine("Delete Student"+sid);
+        }
+        public void SearchStudent(int sid)
+        {
+            Console.WriteLine("Search Student  " + sid);
+        }
+
+        public void AddStudent(Student student)
+        {
+            Console.WriteLine("Please Add Student...");
+        }
     }
 }

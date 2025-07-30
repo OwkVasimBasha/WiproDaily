@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Helloworld
+namespace NUnitDemos
 {
-    internal class Demo
+    public class Demo
     {
-        static void Main()
+        public int Sum(int a, int b)
         {
-            Data d = new Data();
-            d.Greeting();
-            d.Company();
-
+            return a + b;
+        }
+        public string SayHello()
+        {
+            return "Welcome to C# FSD Programming...";
         }
     }
 }

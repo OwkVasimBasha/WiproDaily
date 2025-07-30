@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NUnitDemos
+namespace MockExample
 {
-    internal class Program
+    public interface IwiproData
     {
-        static void Main(string[] args)
-        {
-        }
+        string MilestoneExam1();
+        string MileStoneExam2();
     }
 }

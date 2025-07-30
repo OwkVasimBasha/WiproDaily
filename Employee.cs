@@ -4,16 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractionEx2
+namespace EmployeeProject
 {
-    internal abstract class Employee
+    public class Employee
     {
-        public void show()
-        {
-            Console.WriteLine("The Employee name is vasim");
-        }
+        public int Id {  get; set; }
+        public string Name { get; set; }
+        public double Basic {  get; set; }
 
-        public abstract void id();
-        public abstract void name();
+        public Employee() { }
+
+        public Employee(int id, string name, double basic)
+        {
+            Id = id;
+            Name = name;
+            Basic = basic;
+        }
+        public override string ToString()
+        {
+            return "Id " + Id + " Name " + Name + " Basic " + Basic;
+        }
     }
 }
